@@ -1,0 +1,121 @@
+# Q1 Accessing List Elements
+numbers = [10, 20, 30, 40, 50, 60, 70]
+
+first = numbers[0]
+middle = numbers[len(numbers) // 2]
+last = numbers[-1]
+
+print("First Element:", first)
+print("Middle Element:", middle)
+print("Last Element:", last)
+
+# Q2 Lists Slicing
+print("Q2")
+numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+
+first_five = numbers[:5]
+last_four = numbers[-4:]
+reverse_every_second = numbers[::-2]
+
+print("First Five:", first_five)
+print("Last Four:", last_four)
+print("Every Second in Reverse:", reverse_every_second)
+
+# Q3 List Modification
+print("Q3")
+fruits = ["apple", "banana", "cherry", "mango"]
+fruits[1] = "orange"
+fruits.insert(2, "grapes")
+fruits.remove("cherry")
+
+print(fruits)
+
+# Q4 Reverse without reverse()
+print("Q4")
+numbers = [12, 45, 23, 67, 89, 34]
+reversed_numbers = numbers[::-1]
+
+print("Original List:", numbers)
+print("Reversed List:", reversed_numbers)
+
+# Q5 Second Largest Unique Number
+print("Q5")
+numbers = [45, 12, 89, 34, 89, 67, 45, 23]
+unique_numbers = sorted(set(numbers))
+second_largest = unique_numbers[-2]
+
+print("Unique Numbers:", unique_numbers)
+print("Second Largest:", second_largest)
+
+# Q6 Rotate a List
+print("Q6")
+numbers = [10, 20, 30, 40, 50, 60]
+k = 2
+k = k % len(numbers)
+rotated = numbers[-k:] + numbers[:-k]
+
+print("Original List:", numbers)
+print("Rotated List:", rotated)
+
+# Q7 Remove Duplicates, Preserve Order
+print("Q7")
+numbers = [10, 20, 10, 30, 20, 40, 30, 50]
+unique_numbers = list(dict.fromkeys(numbers))
+
+print(unique_numbers)
+
+
+
+# Q8 Flatten a Nested List
+print("Q8")
+data = [[10, 20], [30, 40], [50, 60]]
+flattened = data[0] + data[1] + data[2]
+
+print(flattened)
+
+# Q9 Extract Data from Matrix
+matrix = [
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90]
+]
+
+main_diagonal = [
+    matrix[0][0],
+    matrix[1][1],
+    matrix[2][2]
+]
+
+secondary_diagonal = [
+    matrix[0][2],
+    matrix[1][1],
+    matrix[2][0]
+]
+
+middle_column = [
+    matrix[0][1],
+    matrix[1][1],
+    matrix[2][1]
+]
+
+print("Main Diagonal:", main_diagonal)
+print("Main Diagonal Sum:", sum(main_diagonal))
+
+print("Secondary Diagonal:", secondary_diagonal)
+print("Secondary Diagonal Sum:", sum(secondary_diagonal))
+
+print("Middle Column:", middle_column)
+print("Middle Column Sum:", sum(middle_column))
+
+# Q10 List Transform Challange
+data = [15, 5, 25, 10, 35, 20, 30]
+
+unique_sorted = sorted(set(data))
+largest_three = unique_sorted[-3:]
+smallest_two = unique_sorted[:2][::-1]
+result = largest_three + smallest_two
+
+print("Sorted Unique Values:", unique_sorted)
+print("Largest Three:", largest_three)
+print("Smallest Two:", smallest_two)
+print("Final Result:", result)
