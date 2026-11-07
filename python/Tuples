@@ -72,3 +72,73 @@ s3_highest = max(s3_scores)
 print("Ali's Average:", s1_average)
 print("Sara's Second Score:", s2_second)
 print("Ahmed's Highest Score:", s3_highest)
+
+# Q18 Tuple Sorting
+employees = (
+    ("Ali", 80000),
+    ("Sara", 120000),
+    ("Ahmed", 95000)
+)
+
+sorted_employees = tuple(
+    sorted(employees, key=__import__('operator').itemgetter(1), reverse=True)
+)
+
+print(sorted_employees)
+
+# Q19 Tuple Matrix
+matrix = (
+    (2, 4, 6),
+    (8, 10, 12),
+    (14, 16, 18)
+)
+
+diagonal = (
+    matrix[0][0],
+    matrix[1][1],
+    matrix[2][2]
+)
+
+diagonal_product = (
+    matrix[0][0] *
+    matrix[1][1] *
+    matrix[2][2]
+)
+
+row_sums = (
+    sum(matrix[0]),
+    sum(matrix[1]),
+    sum(matrix[2])
+)
+
+print("Diagonal:", diagonal)
+print("Diagonal Product:", diagonal_product)
+print("Row Sums:", row_sums)
+
+# Q20 Inventory Tupple Challenge
+records = (
+    ("Laptop", 120000, 5),
+    ("Mouse", 1500, 20),
+    ("Keyboard", 3500, 10)
+)
+
+inventory_value = (
+    records[0][1] * records[0][2] +
+    records[1][1] * records[1][2] +
+    records[2][1] * records[2][2]
+)
+
+most_expensive = max(records, key=__import__('operator').itemgetter(1))
+
+product_names = (
+    records[0][0],
+    records[1][0],
+    records[2][0]
+)
+
+reversed_names = product_names[::-1]
+
+print("Inventory Value:", inventory_value)
+print("Most Expensive Product:", most_expensive)
+print("Reversed Names:", reversed_names)
+
