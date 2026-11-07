@@ -1,0 +1,74 @@
+# Q11 Tuple Indexing
+colors = ("red", "green", "blue", "yellow", "purple")
+
+second = colors[1]
+last = colors[-1]
+middle = colors[1:4]
+
+print("Second:", second)
+print("Last:", last)
+print("Middle three:", middle)
+
+# Q12 Tuple Unpacking
+employee = ("Ali", 28, "Data Engineer", 150000)
+name, age, designation, salary = employee
+
+print("Name:", name)
+print("Salary:", salary)
+
+# Q13 Tuple Concatination
+tuple1 = (10, 20, 30)
+tuple2 = (40, 50, 60)
+
+combined = tuple1 + tuple2
+reversed_tuple = combined[::-1]
+
+print("Combined:", combined)
+print("Reversed:", reversed_tuple)
+
+# Q14 Count and Locate
+numbers = (10, 20, 30, 20, 40, 20, 50)
+
+count_20 = numbers.count(20)
+first_index = numbers.index(20)
+
+print("Count:", count_20)
+print("First Index:", first_index)
+
+# Q15 Expanded Tuple Unpacking
+data = (100, 200, 300, 400, 500, 600)
+
+first, second, *remaining, last = data
+remaining_list = list(remaining)
+
+print("First:", first)
+print("Second:", second)
+print("Remaining:", remaining_list)
+print("Last:", last)
+
+# Q16 Modify an Immutable Tuple
+numbers = (10, 20, 30, 40, 50)
+
+new_tuple = numbers[:2] + (300,) + numbers[3:]
+
+print("Original:", numbers)
+print("Modified:", new_tuple)
+
+# Q17 Nested Tuple Access
+students = (
+    ("Ali", (85, 90, 88)),
+    ("Sara", (92, 87, 95)),
+    ("Ahmed", (78, 84, 80))
+)
+
+s2_second = students[1][1][1]
+
+s1_scores = students[0][1]
+s1_average = sum(s1_scores) / len(s1_scores)
+
+s3_scores = students[2][1]
+s3_highest = max(s3_scores)
+
+print("Ali's Average:", s1_average)
+print("Sara's Second Score:", s2_second)
+print("Ahmed's Highest Score:", s3_highest)
